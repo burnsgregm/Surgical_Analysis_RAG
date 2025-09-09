@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgical Procedure RAG Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .results-output h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .results-output h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .results-output blockquote {
+            border-left: 4px solid #d1d5db;
+            padding-left: 1rem;
+            margin-left: 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+        .results-output ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .results-output p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        <header class="bg-white shadow-md rounded-xl p-6 mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Surgical Procedure RAG Analysis</h1>
+            <p class="mt-2 text-gray-600">Upload a surgery video to analyze the surgeon's dialogue against a library of medical textbooks.</p>
+        </header>
+
+        <main class="bg-white shadow-md rounded-xl p-6">
+            <form id="upload-form" class="space-y-6">
+                <!-- Step 1: Video Upload -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">1. Upload Video</h2>
+                    <div class="flex items-center space-x-4">
+                        <label for="video-upload" class="cursor-pointer bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+                            Select Video
+                        </label>
+                        <input type="file" id="video-upload" name="video" accept="video/*" class="hidden">
+                        <span id="file-name" class="text-gray-500 italic">No file selected.</span>
+                    </div>
+                </div>
+
+                <!-- Step 2: Prompt Templates (Editable) -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">2. RAG Prompt Configuration</h2>
+                    
+                    <!-- System Prompt -->
+                    <div class="mt-4">
+                        <label for="system-prompt" class="block text-sm font-medium text-gray-600 mb-1">System Prompt (Sets the AI's role and rules)</label>
+                        <textarea id="system-prompt" name="system_prompt" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow duration-200">You are an expert surgical assistant and medical analyst. Your purpose is to review surgical data (audio transcripts and visual descriptions) and compare it against a provided corpus of medical textbook excerpts.
+
+Your rules are:
+1.  **Strictly Grounded:** You MUST base your entire analysis *only* on the information provided in the "Textbook Context". Do not use any outside knowledge, make assumptions, or infer information not present in the text.
+2.  **Objective and Factual:** Your analysis must be objective and factual. Avoid subjective opinions or interpretations.
+3.  **Cite Your Sources:** When you identify a relevant piece of information from the context, you should implicitly refer to it in your analysis.
+4.  **Be Concise:** Provide clear and concise answers.</textarea>
+                    </div>
+
+                    <!-- User Prompt -->
+                    <div class="mt-4">
+                        <label for="user-prompt" class="block text-sm font-medium text-gray-600 mb-1">User Prompt (The specific task for the AI)</label>
+                        <textarea id="user-prompt" name="user_prompt" rows="7" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow duration-200">Review the "Observed Data" (consisting of a visual description and the full audio transcript) and compare it against the "Textbook Context".
+
+Your task is to identify any potential deviations from standard procedure, inconsistencies, or noteworthy events. Structure your response as follows:
+
+1.  **Summary:** Provide a one-sentence summary of your findings.
+2.  **Analysis:** In bullet points, detail each finding. For each point, state the observation and explain how it relates to the provided textbook context.
+3.  **Conclusion:** If no deviations or inconsistencies are found, explicitly state that "The observed actions and dialogue are consistent with the provided medical documentation."</textarea>
+                    </div>
+                </div>
+
+                <!-- Step 3: Submission -->
+                <div>
+                    <button type="submit" id="submit-button" class="w-full bg-gray-400 text-white font-bold py-3 px-4 rounded-lg cursor-not-allowed transition-colors duration-300" disabled>
+                        Submit for Analysis
+                    </button>
+                </div>
+            </form>
+
+            <!-- Results Section -->
+            <div id="results-container" class="mt-8 pt-6 border-t border-gray-200 hidden">
+                <div id="loader" class="flex justify-center items-center py-8 hidden">
+                    <div class="loader"></div>
+                    <span class="ml-4 text-gray-600">Analyzing... This may take several minutes.</span>
+                </div>
+                <div id="results-content" class="results-output">
+                    <!-- Results will be injected here -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center mt-8 text-sm text-gray-500">
+            <p>Surgical Analysis POC</p>
+        </footer>
+    </div>
+
+    <script>
+        const uploadForm = document.getElementById('upload-form');
+        const videoUpload = document.getElementById('video-upload');
+        const fileNameSpan = document.getElementById('file-name');
+        const submitButton = document.getElementById('submit-button');
+        const resultsContainer = document.getElementById('results-container');
+        const loader = document.getElementById('loader');
+        const resultsContent = document.getElementById('results-content');
+
+        let selectedFile = null;
+
+        videoUpload.addEventListener('change', () => {
+            if (videoUpload.files.length > 0) {
+                selectedFile = videoUpload.files[0];
+                fileNameSpan.textContent = selectedFile.name;
+                submitButton.disabled = false;
+                submitButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
+                submitButton.classList.add('bg-green-600', 'hover:bg-green-700');
+            } else {
+                selectedFile = null;
+                fileNameSpan.textContent = 'No file selected.';
+                submitButton.disabled = true;
+                submitButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+                submitButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+            }
+        });
+
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!selectedFile) return;
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Processing...';
+            resultsContainer.classList.remove('hidden');
+            loader.classList.remove('hidden');
+            resultsContent.innerHTML = '';
+
+            const formData = new FormData();
+            formData.append('video_file', selectedFile);
+            // Append both prompts to the form data
+            formData.append('system_prompt', document.getElementById('system-prompt').value);
+            formData.append('user_prompt', document.getElementById('user-prompt').value);
+
+            try {
+                const response = await fetch('/analyze_video', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || `Server error: ${response.statusText}`);
+                }
+                
+                displayResults(result);
+
+            } catch (error) {
+                console.error('Error during analysis:', error);
+                resultsContent.innerHTML = `<p class="text-red-500 font-semibold">An error occurred during analysis.</p><p class="text-red-400 mt-2">${error.message}.</p>`;
+            } finally {
+                loader.classList.add('hidden');
+                submitButton.textContent = 'Submit for Analysis';
+            }
+        });
+
+        function displayResults(data) {
+            let html = ``;
+            if (data.error) {
+                html = `<p class="text-red-500 font-semibold">Error processing video:</p><p class="text-red-400 mt-2">${data.error}</p>`;
+            } else {
+                const analysisHtml = marked.parse(data.final_analysis.analysis || "No analysis provided.");
+                const transcriptHtml = (data.full_audio_transcript || "No transcript extracted.")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/\n/g, '<br>');
+
+                html = `
+                    <div id="ai-response">
+                        <h2>RAG Analysis</h2>
+                        <div class="prose max-w-none">${analysisHtml}</div>
+                    </div>
+                    <div id="transcript-output" class="mt-8">
+                        <h2>Full Audio Transcript</h2>
+                        <blockquote class="border-l-4 border-gray-300 pl-4 my-4 text-gray-600">
+                            ${transcriptHtml}
+                        </blockquote>
+                    </div>
+                     <div id="json-output" class="mt-8">
+                        <h2>Full JSON Output</h2>
+                        <pre class="bg-gray-900 text-white p-4 rounded-lg text-xs overflow-x-auto"><code>${JSON.stringify(data, null, 2)}</code></pre>
+                    </div>
+                `;
+            }
+            resultsContent.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

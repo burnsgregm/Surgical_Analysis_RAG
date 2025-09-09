@@ -1,0 +1,2292 @@
+[
+    {
+        "text": "So I place a radio pick marker to take an AP please.",
+        "labels": [
+            {"start": 13, "end": 29, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "And when we're doing fusion it's a little bit bigger, about 11 centimeters.",
+        "labels": [
+            {"start": 21, "end": 27, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "So here I'm just touching the set joint.",
+        "labels": [
+            {"start": 30, "end": 40, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The next step would then be to place a guide wire and then we simply remove the needle.",
+        "labels": [
+            {"start": 39, "end": 50, "label": "INSTRUMENT"},
+            {"start": 78, "end": 84, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "I typically don't want to go into the dis space at this point.",
+        "labels": [
+            {"start": 37, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "So the next step is to utilize the reaming tool.",
+        "labels": [
+            {"start": 33, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "I typically would use a sponge stick floro because it basically approximates the pedical.",
+        "labels": [
+            {"start": 25, "end": 37, "label": "INSTRUMENT"},
+            {"start": 80, "end": 87, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "So I'm just marking the pedicels floro just so that we have a slight understanding of our anatomy.",
+        "labels": [
+            {"start": 26, "end": 34, "label": "ANATOMY"},
+            {"start": 89, "end": 96, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The next step is I want to identify the end plate floro.",
+        "labels": [
+            {"start": 40, "end": 49, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "When we're doing just a discectomy, the tube is is typically about eight centimeters.",
+        "labels": [
+            {"start": 26, "end": 36, "label": "ACTION"},
+            {"start": 42, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "And then we make an incision in the skin.",
+        "labels": [
+            {"start": 21, "end": 29, "label": "ACTION"},
+            {"start": 37, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "One of the important pearls for these procedures is respecting the medial particular line.",
+        "labels": [
+            {"start": 65, "end": 86, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "And then next, it's just a series of dilators to go down and dilate up the tissue.",
+        "labels": [
+            {"start": 38, "end": 46, "label": "INSTRUMENT"},
+            {"start": 77, "end": 83, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "And you have to remember that the needle has a bevel.",
+        "labels": [
+            {"start": 33, "end": 39, "label": "INSTRUMENT"},
+            {"start": 46, "end": 51, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The next step of the procedure is going to be for reaming a resecting bone.",
+        "labels": [
+            {"start": 49, "end": 56, "label": "ACTION"},
+            {"start": 59, "end": 68, "label": "ACTION"},
+            {"start": 69, "end": 73, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "It's a crown remiss, I think it cuts in one direction in the clockwise direction.",
+        "labels": [
+            {"start": 8, "end": 14, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "So typically, I'll just thread this down over my dilator.",
+        "labels": [
+            {"start": 49, "end": 56, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "And what I need to do now is to access canvas triangle.",
+        "labels": [
+            {"start": 40, "end": 55, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "I need to withdraw the needle just a little bit away from the fascia and use the bevel.",
+        "labels": [
+            {"start": 22, "end": 28, "label": "INSTRUMENT"},
+            {"start": 65, "end": 71, "label": "ANATOMY"},
+            {"start": 85, "end": 90, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "And you can utilize that to help steer and create your trajectory floro.",
+        "labels": [
+            {"start": 53, "end": 63, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "This would be an adequate position in the lateral position.",
+        "labels": [
+            {"start": 12, "end": 29, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "This would actually be perfect for a placement of a cage.",
+        "labels": [
+            {"start": 42, "end": 46, "label": "INSTRUMENT"},
+            {"start": 31, "end": 40, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Next step would then be to place a guide wire.",
+        "labels": [
+            {"start": 34, "end": 45, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "We're just going to mark two lines about 8 centimeters and 10 centimeters off the midline.",
+        "labels": [
+            {"start": 82, "end": 89, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "You respect that line and stay safe.",
+        "labels": []
+    },
+    {
+        "text": "I want to feel and touch the bone floro.",
+        "labels": [
+            {"start": 28, "end": 32, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The goal here is not to get into the canal, but simply to dilate up the soft tissue.",
+        "labels": [
+            {"start": 35, "end": 40, "label": "ANATOMY"},
+            {"start": 57, "end": 73, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The last time you did an open surgery, how often does the derogal lateral for the medial border of the pedical?",
+        "labels": [
+            {"start": 26, "end": 38, "label": "ACTION"},
+            {"start": 85, "end": 105, "label": "ANATOMY"},
+            {"start": 113, "end": 120, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The first landmark you identify is the midline.",
+        "labels": [
+            {"start": 11, "end": 19, "label": "OBSERVATION"},
+            {"start": 40, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "It helps to not tear up the tissue.",
+        "labels": [
+            {"start": 29, "end": 35, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "So then typically we would insert a needle.",
+        "labels": [
+            {"start": 29, "end": 43, "label": "ACTION"},
+            {"start": 38, "end": 44, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "And there I'm into the dis space.",
+        "labels": [
+            {"start": 24, "end": 34, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Now this AP projection here in the sort of in the medial mid portion of the pedicals.",
+        "labels": [
+            {"start": 9, "end": 21, "label": "OBSERVATION"},
+            {"start": 62, "end": 79, "label": "ANATOMY"},
+            {"start": 87, "end": 95, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "I want to get my trajectory set.",
+        "labels": [
+            {"start": 17, "end": 27, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "And I just feel it slide off.",
+        "labels": []
+    },
+    {
+        "text": "This is L3, 4.",
+        "labels": [
+            {"start": 8, "end": 14, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "We need to identify our landmarks.",
+        "labels": [
+            {"start": 24, "end": 33, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon uses a scalpel for the primary incision.",
+        "labels": [
+            {"start": 19, "end": 26, "label": "INSTRUMENT"},
+            {"start": 36, "end": 52, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "He is retracting the liver with a grasper.",
+        "labels": [
+            {"start": 6, "end": 16, "label": "ACTION"},
+            {"start": 21, "end": 26, "label": "ANATOMY"},
+            {"start": 33, "end": 40, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A thorough dissection of the fascia is required.",
+        "labels": [
+            {"start": 10, "end": 20, "label": "ACTION"},
+            {"start": 28, "end": 34, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Observe the clear separation between the artery and the duct.",
+        "labels": [
+            {"start": 13, "end": 23, "label": "OBSERVATION"},
+            {"start": 41, "end": 47, "label": "ANATOMY"},
+            {"start": 56, "end": 60, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "We will now perform the anastomosis with a new suture.",
+        "labels": [
+            {"start": 24, "end": 35, "label": "ACTION"},
+            {"start": 44, "end": 50, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The reaming tool clears away excess bone tissue.",
+        "labels": [
+            {"start": 4, "end": 17, "label": "INSTRUMENT"},
+            {"start": 37, "end": 48, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The final step is the closure of the incision.",
+        "labels": [
+            {"start": 22, "end": 29, "label": "ACTION"},
+            {"start": 37, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Carefully place the pedicle screws into the vertebral body.",
+        "labels": [
+            {"start": 21, "end": 35, "label": "INSTRUMENT"},
+            {"start": 45, "end": 61, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Irrigation is used to clear the surgical field.",
+        "labels": [
+            {"start": 0, "end": 10, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The dilators create a channel to the spinal column.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "INSTRUMENT"},
+            {"start": 38, "end": 52, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A small bleeder was cauterized near the nerve root.",
+        "labels": [
+            {"start": 8, "end": 15, "label": "OBSERVATION"},
+            {"start": 20, "end": 30, "label": "ACTION"},
+            {"start": 41, "end": 51, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The tube provides access for the endoscopic fusion.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "INSTRUMENT"},
+            {"start": 39, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "We must confirm the trajectory of the guide wire.",
+        "labels": [
+            {"start": 24, "end": 34, "label": "OBSERVATION"},
+            {"start": 42, "end": 53, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "Resecting the ligamentum flavum is the next step.",
+        "labels": [
+            {"start": 0, "end": 9, "label": "ACTION"},
+            {"start": 14, "end": 31, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient is in the lateral decubitus position.",
+        "labels": [
+            {"start": 22, "end": 47, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A radio-opaque dye is used to visualize the artery.",
+        "labels": [
+            {"start": 2, "end": 19, "label": "INSTRUMENT"},
+            {"start": 46, "end": 52, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "We've achieved a good decompression of the nerve.",
+        "labels": [
+            {"start": 20, "end": 33, "label": "ACTION"},
+            {"start": 41, "end": 46, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgical microscope provides excellent visualization.",
+        "labels": [
+            {"start": 4, "end": 25, "label": "INSTRUMENT"},
+            {"start": 36, "end": 50, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "Hemostasis is maintained with bipolar forceps.",
+        "labels": [
+            {"start": 0, "end": 10, "label": "ACTION"},
+            {"start": 30, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The dura is retracted to expose the spinal cord.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 12, "end": 21, "label": "ACTION"},
+            {"start": 36, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A suction tube is used to clear away blood.",
+        "labels": [
+            {"start": 2, "end": 14, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "Palpation of the spinous process confirms the level.",
+        "labels": [
+            {"start": 0, "end": 9, "label": "ACTION"},
+            {"start": 17, "end": 32, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Final placement of the cage is confirmed with fluoroscopy.",
+        "labels": [
+            {"start": 24, "end": 28, "label": "INSTRUMENT"},
+            {"start": 48, "end": 59, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A Kerrison rongeur is used for bone removal.",
+        "labels": [
+            {"start": 2, "end": 18, "label": "INSTRUMENT"},
+            {"start": 32, "end": 44, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a laminectomy.",
+        "labels": [
+            {"start": 28, "end": 39, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "We must visualize the cauda equina before proceeding.",
+        "labels": [
+            {"start": 24, "end": 36, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "There is significant scarring from a previous surgery.",
+        "labels": [
+            {"start": 19, "end": 27, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The Penfield dissector is used to probe the nerve.",
+        "labels": [
+            {"start": 4, "end": 21, "label": "INSTRUMENT"},
+            {"start": 46, "end": 51, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgeon will now apply the bone graft.",
+        "labels": [
+            {"start": 28, "end": 38, "label": "ACTION"},
+            {"start": 39, "end": 49, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "Checking for CSF leak is a critical step.",
+        "labels": [
+            {"start": 12, "end": 20, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A Woodson elevator helps to detach the ligament.",
+        "labels": [
+            {"start": 2, "end": 18, "label": "INSTRUMENT"},
+            {"start": 39, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The team confirms the correct spinal level.",
+        "labels": [
+            {"start": 29, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Suturing the muscle layers is next.",
+        "labels": [
+            {"start": 0, "end": 8, "label": "ACTION"},
+            {"start": 13, "end": 26, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The anesthesiologist is monitoring the patient's vitals.",
+        "labels": []
+    },
+    {
+        "text": "We are using a high-speed burr for the osteotomy.",
+        "labels": [
+            {"start": 18, "end": 32, "label": "INSTRUMENT"},
+            {"start": 41, "end": 50, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The dura mater is intact and glistening.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "ANATOMY"},
+            {"start": 19, "end": 25, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "We will use a retractor to maintain exposure.",
+        "labels": [
+            {"start": 16, "end": 25, "label": "INSTRUMENT"},
+            {"start": 36, "end": 44, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The sciatic nerve must be protected at all times.",
+        "labels": [
+            {"start": 4, "end": 17, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The team performs a final count of all sponges and needles.",
+        "labels": [
+            {"start": 40, "end": 47, "label": "INSTRUMENT"},
+            {"start": 52, "end": 59, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient's blood pressure is stable.",
+        "labels": [
+            {"start": 32, "end": 38, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A clamp is applied to the aorta.",
+        "labels": [
+            {"start": 2, "end": 7, "label": "INSTRUMENT"},
+            {"start": 27, "end": 32, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The electrocautery is used for hemostasis.",
+        "labels": [
+            {"start": 4, "end": 19, "label": "INSTRUMENT"},
+            {"start": 31, "end": 41, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "This completes the appendectomy portion of the procedure.",
+        "labels": [
+            {"start": 18, "end": 29, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The pathology sample is sent to the lab.",
+        "labels": []
+    },
+    {
+        "text": "The scrub nurse will prepare the next instrument.",
+        "labels": [
+            {"start": 37, "end": 47, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The femoral artery is exposed for cannulation.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ANATOMY"},
+            {"start": 34, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient is prepped and draped in the usual sterile fashion.",
+        "labels": [
+            {"start": 16, "end": 23, "label": "ACTION"},
+            {"start": 28, "end": 34, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A surgical drain may be placed if necessary.",
+        "labels": [
+            {"start": 10, "end": 15, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The peritoneum is a delicate layer to handle.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The resident is closing the skin with a running stitch.",
+        "labels": [
+            {"start": 18, "end": 25, "label": "ACTION"},
+            {"start": 30, "end": 34, "label": "ANATOMY"},
+            {"start": 42, "end": 56, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The team discusses the postoperative care plan.",
+        "labels": []
+    },
+    {
+        "text": "The biopsy forceps are used to take a sample.",
+        "labels": [
+            {"start": 4, "end": 19, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "We are now performing the colectomy.",
+        "labels": [
+            {"start": 26, "end": 35, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The spleen is carefully mobilized and retracted.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 27, "end": 36, "label": "ACTION"},
+            {"start": 41, "end": 50, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "An adhesion was noted between the bowel and the abdominal wall.",
+        "labels": [
+            {"start": 3, "end": 11, "label": "OBSERVATION"},
+            {"start": 34, "end": 39, "label": "ANATOMY"},
+            {"start": 48, "end": 62, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The trocar is inserted for laparoscopic access.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "INSTRUMENT"},
+            {"start": 34, "end": 54, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon checks for bleeding before closing.",
+        "labels": [
+            {"start": 22, "end": 30, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The stapler is fired to transect the colon.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "INSTRUMENT"},
+            {"start": 24, "end": 32, "label": "ACTION"},
+            {"start": 37, "end": 42, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The gallbladder is dissected from the liver bed.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "ANATOMY"},
+            {"start": 19, "end": 28, "label": "ACTION"},
+            {"start": 38, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient has a history of prior abdominal surgeries.",
+        "labels": [
+            {"start": 34, "end": 54, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The anesthesiologist confirms adequate muscle relaxation.",
+        "labels": [
+            {"start": 34, "end": 55, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A surgical clip is applied to the cystic duct.",
+        "labels": [
+            {"start": 10, "end": 14, "label": "INSTRUMENT"},
+            {"start": 35, "end": 46, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The mesentery is incised to mobilize the small bowel.",
+        "labels": [
+            {"start": 4, "end": 13, "label": "ANATOMY"},
+            {"start": 17, "end": 24, "label": "ACTION"},
+            {"start": 42, "end": 53, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The argon beam coagulator is used for surface bleeding.",
+        "labels": [
+            {"start": 4, "end": 26, "label": "INSTRUMENT"},
+            {"start": 45, "end": 53, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The stomach is inspected for any abnormalities.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 30, "end": 42, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The omentum is gently moved to expose the pancreas.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 42, "end": 50, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A Babcock clamp is used to grasp the appendix.",
+        "labels": [
+            {"start": 2, "end": 15, "label": "INSTRUMENT"},
+            {"start": 33, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgical robot is docked for the procedure.",
+        "labels": [
+            {"start": 4, "end": 19, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon controls the robotic arms from the console.",
+        "labels": [
+            {"start": 26, "end": 38, "label": "INSTRUMENT"},
+            {"start": 48, "end": 55, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The 3D camera provides a magnified view of the surgical site.",
+        "labels": [
+            {"start": 4, "end": 14, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "This concludes the herniorrhaphy.",
+        "labels": [
+            {"start": 20, "end": 33, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A surgical mesh is placed to reinforce the abdominal wall.",
+        "labels": [
+            {"start": 10, "end": 14, "label": "INSTRUMENT"},
+            {"start": 44, "end": 58, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient's heart rate has increased slightly.",
+        "labels": [
+            {"start": 14, "end": 24, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The operating room is kept at a cool temperature.",
+        "labels": []
+    },
+    {
+        "text": "The ligament of Treitz is identified as a landmark.",
+        "labels": [
+            {"start": 4, "end": 23, "label": "ANATOMY"},
+            {"start": 42, "end": 50, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The small intestine is run to check for injuries.",
+        "labels": [
+            {"start": 4, "end": 19, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgeon is using Metzenbaum scissors for fine dissection.",
+        "labels": [
+            {"start": 22, "end": 41, "label": "INSTRUMENT"},
+            {"start": 46, "end": 61, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The common bile duct is a critical structure to preserve.",
+        "labels": [
+            {"start": 4, "end": 21, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A cholangiogram is performed to check for stones.",
+        "labels": [
+            {"start": 2, "end": 15, "label": "ACTION"},
+            {"start": 42, "end": 48, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The cecum is mobilized by incising the white line of Toldt.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 24, "end": 32, "label": "ACTION"},
+            {"start": 37, "end": 58, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient has no known drug allergies.",
+        "labels": [
+            {"start": 27, "end": 35, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The circulating nurse documents the procedure.",
+        "labels": []
+    },
+    {
+        "text": "A self-retaining retractor is positioned.",
+        "labels": [
+            {"start": 2, "end": 28, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The iliac vessels are identified and protected.",
+        "labels": [
+            {"start": 4, "end": 17, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The ureter is a retroperitoneal structure.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 16, "end": 39, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The team takes a moment for a surgical timeout.",
+        "labels": [
+            {"start": 31, "end": 47, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The DeBakey forceps are used to handle delicate tissue.",
+        "labels": [
+            {"start": 4, "end": 19, "label": "INSTRUMENT"},
+            {"start": 42, "end": 56, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The thyroid gland is highly vascular.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ANATOMY"},
+            {"start": 22, "end": 37, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "We will perform a thoracotomy to access the lung.",
+        "labels": [
+            {"start": 18, "end": 29, "label": "ACTION"},
+            {"start": 43, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The phrenic nerve is identified on the diaphragm.",
+        "labels": [
+            {"start": 4, "end": 17, "label": "ANATOMY"},
+            {"start": 35, "end": 44, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A chest tube is placed for drainage.",
+        "labels": [
+            {"start": 2, "end": 12, "label": "INSTRUMENT"},
+            {"start": 25, "end": 33, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The pericardium is opened to expose the heart.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "ANATOMY"},
+            {"start": 36, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The coronary arteries are bypassed using a graft.",
+        "labels": [
+            {"start": 4, "end": 21, "label": "ANATOMY"},
+            {"start": 26, "end": 35, "label": "ACTION"},
+            {"start": 43, "end": 48, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient is placed on cardiopulmonary bypass.",
+        "labels": [
+            {"start": 26, "end": 50, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The aorta is cross-clamped.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 13, "end": 26, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Cardioplegia solution is administered to stop the heart.",
+        "labels": [
+            {"start": 0, "end": 21, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The mitral valve is replaced with a prosthesis.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"},
+            {"start": 20, "end": 28, "label": "ACTION"},
+            {"start": 35, "end": 45, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon uses an endoscope to visualize the joint.",
+        "labels": [
+            {"start": 19, "end": 28, "label": "INSTRUMENT"},
+            {"start": 46, "end": 51, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "This is a standard arthroscopy of the knee.",
+        "labels": [
+            {"start": 17, "end": 28, "label": "ACTION"},
+            {"start": 36, "end": 40, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The meniscus is torn and will be debrided.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ANATOMY"},
+            {"start": 16, "end": 20, "label": "OBSERVATION"},
+            {"start": 34, "end": 42, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A shaver is used to smooth the articular cartilage.",
+        "labels": [
+            {"start": 2, "end": 8, "label": "INSTRUMENT"},
+            {"start": 32, "end": 52, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The ACL is reconstructed using a hamstring tendon graft.",
+        "labels": [
+            {"start": 4, "end": 7, "label": "ANATOMY"},
+            {"start": 11, "end": 24, "label": "ACTION"},
+            {"start": 32, "end": 54, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The craniotomy allows access to the brain.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "ACTION"},
+            {"start": 31, "end": 36, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The tumor is resected from the frontal lobe.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "OBSERVATION"},
+            {"start": 13, "end": 21, "label": "ACTION"},
+            {"start": 31, "end": 43, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgeon navigates using a stereotactic system.",
+        "labels": [
+            {"start": 30, "end": 50, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The dura is closed with a watertight seal.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 12, "end": 18, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The bone flap is secured with plates and screws.",
+        "labels": [
+            {"start": 4, "end": 13, "label": "ANATOMY"},
+            {"start": 30, "end": 36, "label": "INSTRUMENT"},
+            {"start": 41, "end": 47, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A burr hole is drilled to relieve pressure.",
+        "labels": [
+            {"start": 2, "end": 11, "label": "INSTRUMENT"},
+            {"start": 15, "end": 22, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient has a subdural hematoma.",
+        "labels": [
+            {"start": 22, "end": 39, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The skin staples are applied for closure.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "INSTRUMENT"},
+            {"start": 32, "end": 39, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The anesthesiologist is reversing the anesthesia.",
+        "labels": [
+            {"start": 28, "end": 37, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The specimen is marked for orientation.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is using loupes for magnification.",
+        "labels": [
+            {"start": 22, "end": 28, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A tourniquet is applied to the upper arm.",
+        "labels": [
+            {"start": 2, "end": 12, "label": "INSTRUMENT"},
+            {"start": 34, "end": 43, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The radial nerve is carefully identified and preserved.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The fracture is reduced and fixed with a plate.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "OBSERVATION"},
+            {"start": 16, "end": 23, "label": "ACTION"},
+            {"start": 35, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The C-arm provides real-time X-ray imaging.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient is moved to the recovery room.",
+        "labels": []
+    },
+    {
+        "text": "The surgeon performs a digital rectal exam.",
+        "labels": [
+            {"start": 22, "end": 41, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The prostate is removed via a robotic approach.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ANATOMY"},
+            {"start": 16, "end": 23, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The bladder neck is reconstructed.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"},
+            {"start": 20, "end": 33, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A Foley catheter is placed at the end.",
+        "labels": [
+            {"start": 2, "end": 17, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon checks for lymph node involvement.",
+        "labels": [
+            {"start": 22, "end": 32, "label": "ANATOMY"},
+            {"start": 33, "end": 44, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The kidney is mobilized within Gerota's fascia.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 30, "end": 45, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The renal artery and vein are individually ligated.",
+        "labels": [
+            {"start": 4, "end": 25, "label": "ANATOMY"},
+            {"start": 26, "end": 30, "label": "ANATOMY"},
+            {"start": 47, "end": 54, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "This completes the nephrectomy.",
+        "labels": [
+            {"start": 20, "end": 31, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The adrenal gland is preserved if possible.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The specimen is placed in a retrieval bag.",
+        "labels": [
+            {"start": 31, "end": 45, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a tonsillectomy.",
+        "labels": [
+            {"start": 28, "end": 41, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The tonsils are hypertrophic.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 16, "end": 28, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A mouth gag is used to keep the airway open.",
+        "labels": [
+            {"start": 2, "end": 11, "label": "INSTRUMENT"},
+            {"start": 33, "end": 39, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Bleeding is controlled with suction cautery.",
+        "labels": [
+            {"start": 0, "end": 8, "label": "OBSERVATION"},
+            {"start": 28, "end": 43, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The adenoids are removed with a curette.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ANATOMY"},
+            {"start": 31, "end": 38, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The nasal septum is deviated.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"},
+            {"start": 20, "end": 28, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A septoplasty is performed to correct the deviation.",
+        "labels": [
+            {"start": 2, "end": 13, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon is using a headlight for better illumination.",
+        "labels": [
+            {"start": 22, "end": 31, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The vocal cords are visualized with a laryngoscope.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"},
+            {"start": 35, "end": 48, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient is intubated for general anesthesia.",
+        "labels": [
+            {"start": 16, "end": 25, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The endotracheal tube is secured in place.",
+        "labels": [
+            {"start": 4, "end": 22, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon performs a skin graft to cover the defect.",
+        "labels": [
+            {"start": 22, "end": 32, "label": "ACTION"},
+            {"start": 46, "end": 52, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A dermatome is used to harvest the skin.",
+        "labels": [
+            {"start": 2, "end": 11, "label": "INSTRUMENT"},
+            {"start": 33, "end": 37, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The donor site is dressed with a sterile bandage.",
+        "labels": [
+            {"start": 4, "end": 14, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The graft is sutured into place.",
+        "labels": [
+            {"start": 10, "end": 17, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The flap has good capillary refill.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 13, "end": 35, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a mastectomy.",
+        "labels": [
+            {"start": 28, "end": 39, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The breast tissue is removed down to the pectoral fascia.",
+        "labels": [
+            {"start": 4, "end": 17, "label": "ANATOMY"},
+            {"start": 41, "end": 56, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The axillary lymph nodes are also dissected.",
+        "labels": [
+            {"start": 4, "end": 24, "label": "ANATOMY"},
+            {"start": 34, "end": 43, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A sentinel node biopsy was performed.",
+        "labels": [
+            {"start": 2, "end": 24, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient will undergo breast reconstruction.",
+        "labels": [
+            {"start": 24, "end": 46, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A tissue expander is placed under the skin.",
+        "labels": [
+            {"start": 2, "end": 18, "label": "INSTRUMENT"},
+            {"start": 37, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a laparotomy.",
+        "labels": [
+            {"start": 28, "end": 39, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A midline incision is made from the xiphoid to the umbilicus.",
+        "labels": [
+            {"start": 2, "end": 18, "label": "ACTION"},
+            {"start": 34, "end": 41, "label": "ANATOMY"},
+            {"start": 49, "end": 58, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The abdominal cavity is explored for pathology.",
+        "labels": [
+            {"start": 4, "end": 21, "label": "ANATOMY"},
+            {"start": 40, "end": 49, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The bowel is run from the ligament of Treitz to the cecum.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 28, "end": 47, "label": "ANATOMY"},
+            {"start": 55, "end": 60, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient has extensive adhesions.",
+        "labels": [
+            {"start": 25, "end": 34, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "Lysis of adhesions is performed carefully.",
+        "labels": [
+            {"start": 0, "end": 18, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon is using an Army-Navy retractor.",
+        "labels": [
+            {"start": 22, "end": 42, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The falciform ligament is divided.",
+        "labels": [
+            {"start": 4, "end": 23, "label": "ANATOMY"},
+            {"start": 27, "end": 34, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The liver is palpated for any masses.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 13, "end": 21, "label": "ACTION"},
+            {"start": 34, "end": 40, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The abdomen is closed in layers.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 15, "end": 21, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The fascia is closed with a heavy, non-absorbable suture.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 53, "end": 59, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The skin is closed with a subcuticular stitch.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 12, "end": 18, "label": "ACTION"},
+            {"start": 26, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient is extubated in the operating room.",
+        "labels": [
+            {"start": 16, "end": 26, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The final sponge count is correct.",
+        "labels": [
+            {"start": 17, "end": 28, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a carotid endarterectomy.",
+        "labels": [
+            {"start": 28, "end": 50, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The carotid artery has severe stenosis.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ANATOMY"},
+            {"start": 23, "end": 39, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A shunt is placed to maintain cerebral perfusion.",
+        "labels": [
+            {"start": 2, "end": 7, "label": "INSTRUMENT"},
+            {"start": 31, "end": 50, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The plaque is carefully removed from the artery.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "OBSERVATION"},
+            {"start": 38, "end": 44, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The arteriotomy is closed with a patch.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ACTION"},
+            {"start": 32, "end": 37, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon checks for flow with a Doppler ultrasound.",
+        "labels": [
+            {"start": 32, "end": 51, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient's neurological status is checked post-operatively.",
+        "labels": [
+            {"start": 14, "end": 34, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a total knee arthroplasty.",
+        "labels": [
+            {"start": 28, "end": 54, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The femur and tibia are resurfaced.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 14, "end": 19, "label": "ANATOMY"},
+            {"start": 24, "end": 34, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A prosthetic joint is implanted.",
+        "labels": [
+            {"start": 2, "end": 18, "label": "INSTRUMENT"},
+            {"start": 22, "end": 31, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patella is also resurfaced.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 19, "end": 29, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Bone cement is used to fix the components.",
+        "labels": [
+            {"start": 0, "end": 11, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The range of motion is checked before closing.",
+        "labels": [
+            {"start": 4, "end": 20, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a total hip arthroplasty.",
+        "labels": [
+            {"start": 28, "end": 52, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The femoral head is dislocated from the acetabulum.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"},
+            {"start": 20, "end": 30, "label": "ACTION"},
+            {"start": 40, "end": 51, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The acetabulum is reamed to accept the cup.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "ANATOMY"},
+            {"start": 19, "end": 25, "label": "ACTION"},
+            {"start": 42, "end": 45, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A prosthetic stem is placed into the femur.",
+        "labels": [
+            {"start": 2, "end": 17, "label": "INSTRUMENT"},
+            {"start": 36, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The hip is reduced and stability is confirmed.",
+        "labels": [
+            {"start": 4, "end": 7, "label": "ANATOMY"},
+            {"start": 11, "end": 18, "label": "ACTION"},
+            {"start": 23, "end": 32, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The leg lengths are checked and confirmed to be equal.",
+        "labels": [
+            {"start": 4, "end": 15, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a coronary artery bypass graft.",
+        "labels": [
+            {"start": 28, "end": 60, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The saphenous vein is harvested from the leg.",
+        "labels": [
+            {"start": 4, "end": 19, "label": "ANATOMY"},
+            {"start": 23, "end": 32, "label": "ACTION"},
+            {"start": 42, "end": 45, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The internal mammary artery is also used as a graft.",
+        "labels": [
+            {"start": 4, "end": 28, "label": "ANATOMY"},
+            {"start": 48, "end": 53, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient has three-vessel coronary artery disease.",
+        "labels": [
+            {"start": 20, "end": 53, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is using an operating loupe for this delicate work.",
+        "labels": [
+            {"start": 22, "end": 38, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The graft is sutured to the aorta and the coronary artery.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "INSTRUMENT"},
+            {"start": 13, "end": 20, "label": "ACTION"},
+            {"start": 28, "end": 33, "label": "ANATOMY"},
+            {"start": 42, "end": 58, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient is weaned from cardiopulmonary bypass.",
+        "labels": [
+            {"start": 27, "end": 51, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The heart resumes beating spontaneously.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Pacing wires are placed on the heart surface.",
+        "labels": [
+            {"start": 0, "end": 12, "label": "INSTRUMENT"},
+            {"start": 32, "end": 45, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The sternum is closed with sternal wires.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 15, "end": 21, "label": "ACTION"},
+            {"start": 28, "end": 41, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient is transferred to the ICU.",
+        "labels": []
+    },
+    {
+        "text": "The surgeon is performing a Whipple procedure.",
+        "labels": [
+            {"start": 28, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The head of the pancreas has a large tumor.",
+        "labels": [
+            {"start": 4, "end": 23, "label": "ANATOMY"},
+            {"start": 32, "end": 43, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The duodenum, gallbladder, and bile duct are also removed.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ANATOMY"},
+            {"start": 14, "end": 25, "label": "ANATOMY"},
+            {"start": 31, "end": 41, "label": "ANATOMY"},
+            {"start": 51, "end": 58, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The reconstruction involves several new anastomoses.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ACTION"},
+            {"start": 34, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The pancreas is sutured to the jejunum.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ANATOMY"},
+            {"start": 16, "end": 23, "label": "ACTION"},
+            {"start": 31, "end": 38, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The bile duct is also connected to the jejunum.",
+        "labels": [
+            {"start": 4, "end": 13, "label": "ANATOMY"},
+            {"start": 34, "end": 41, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The stomach is reconnected to the small intestine.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 15, "end": 26, "label": "ACTION"},
+            {"start": 34, "end": 50, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "This is a long and complex operation.",
+        "labels": [
+            {"start": 26, "end": 35, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The patient has lost a significant amount of blood.",
+        "labels": [
+            {"start": 23, "end": 51, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "Blood products are being administered.",
+        "labels": [
+            {"start": 0, "end": 14, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing an esophagectomy.",
+        "labels": [
+            {"start": 28, "end": 41, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The esophagus has a cancerous lesion.",
+        "labels": [
+            {"start": 4, "end": 13, "label": "ANATOMY"},
+            {"start": 22, "end": 39, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The stomach is pulled up into the chest to replace the esophagus.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"},
+            {"start": 30, "end": 35, "label": "ANATOMY"},
+            {"start": 51, "end": 60, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A gastric pull-up is a major undertaking.",
+        "labels": [
+            {"start": 2, "end": 19, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient is intubated with a double-lumen tube.",
+        "labels": [
+            {"start": 16, "end": 25, "label": "ACTION"},
+            {"start": 32, "end": 50, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "This allows for single-lung ventilation.",
+        "labels": [
+            {"start": 16, "end": 38, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a lobectomy.",
+        "labels": [
+            {"start": 28, "end": 37, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The upper lobe of the right lung contains a nodule.",
+        "labels": [
+            {"start": 4, "end": 30, "label": "ANATOMY"},
+            {"start": 41, "end": 47, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A video-assisted thoracoscopic surgery (VATS) approach is used.",
+        "labels": [
+            {"start": 2, "end": 42, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The pulmonary artery and vein are stapled and divided.",
+        "labels": [
+            {"start": 4, "end": 27, "label": "ANATOMY"},
+            {"start": 28, "end": 32, "label": "ANATOMY"},
+            {"start": 37, "end": 44, "label": "ACTION"},
+            {"start": 49, "end": 56, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The bronchus is also stapled and divided.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ANATOMY"},
+            {"start": 20, "end": 27, "label": "ACTION"},
+            {"start": 32, "end": 39, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The lobe is placed in a bag and removed through a small incision.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 23, "end": 26, "label": "INSTRUMENT"},
+            {"start": 50, "end": 58, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon checks for an air leak.",
+        "labels": [
+            {"start": 22, "end": 30, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a liver resection.",
+        "labels": [
+            {"start": 28, "end": 44, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The liver has multiple metastatic lesions.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 24, "end": 43, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "An intraoperative ultrasound is used to guide the resection.",
+        "labels": [
+            {"start": 3, "end": 29, "label": "INSTRUMENT"},
+            {"start": 46, "end": 55, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The Pringle maneuver is performed to control bleeding.",
+        "labels": [
+            {"start": 4, "end": 21, "label": "ACTION"},
+            {"start": 42, "end": 50, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The liver parenchyma is divided using a CUSA.",
+        "labels": [
+            {"start": 4, "end": 21, "label": "ANATOMY"},
+            {"start": 25, "end": 32, "label": "ACTION"},
+            {"start": 41, "end": 45, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The hepatic veins and portal triads are carefully preserved.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ANATOMY"},
+            {"start": 23, "end": 36, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The cut surface of the liver is sealed with argon plasma coagulation.",
+        "labels": [
+            {"start": 27, "end": 32, "label": "ANATOMY"},
+            {"start": 36, "end": 42, "label": "ACTION"},
+            {"start": 49, "end": 74, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A drain is left in the subhepatic space.",
+        "labels": [
+            {"start": 2, "end": 7, "label": "INSTRUMENT"},
+            {"start": 23, "end": 39, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient will be monitored for bile leak.",
+        "labels": [
+            {"start": 33, "end": 42, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a thyroidectomy.",
+        "labels": [
+            {"start": 28, "end": 41, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The thyroid gland has a large goiter.",
+        "labels": [
+            {"start": 4, "end": 18, "label": "ANATOMY"},
+            {"start": 27, "end": 33, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The recurrent laryngeal nerve is identified with a nerve monitor.",
+        "labels": [
+            {"start": 4, "end": 29, "label": "ANATOMY"},
+            {"start": 49, "end": 62, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The parathyroid glands are dissected and preserved.",
+        "labels": [
+            {"start": 4, "end": 23, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The superior thyroid artery is ligated.",
+        "labels": [
+            {"start": 4, "end": 28, "label": "ANATOMY"},
+            {"start": 32, "end": 39, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The thyroid is removed in one piece.",
+        "labels": [
+            {"start": 4, "end": 11, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The patient will need lifelong thyroid hormone replacement.",
+        "labels": []
+    },
+    {
+        "text": "The surgeon is performing a parathyroidectomy.",
+        "labels": [
+            {"start": 28, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient has hyperparathyroidism.",
+        "labels": [
+            {"start": 16, "end": 36, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "A gamma probe is used to locate the adenoma.",
+        "labels": [
+            {"start": 2, "end": 13, "label": "INSTRUMENT"},
+            {"start": 33, "end": 40, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "Intraoperative PTH levels are monitored.",
+        "labels": [
+            {"start": 16, "end": 26, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The abnormal parathyroid gland is resected.",
+        "labels": [
+            {"start": 13, "end": 32, "label": "ANATOMY"},
+            {"start": 36, "end": 44, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient's calcium levels should normalize post-operatively.",
+        "labels": [
+            {"start": 14, "end": 28, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a cleft lip repair.",
+        "labels": [
+            {"start": 28, "end": 44, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient is a three-month-old infant.",
+        "labels": []
+    },
+    {
+        "text": "The anatomy of the lip and nose is distorted.",
+        "labels": [
+            {"start": 15, "end": 18, "label": "ANATOMY"},
+            {"start": 23, "end": 27, "label": "ANATOMY"},
+            {"start": 31, "end": 40, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon marks the incision lines with a caliper.",
+        "labels": [
+            {"start": 42, "end": 49, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The orbicularis oris muscle is reapproximated.",
+        "labels": [
+            {"start": 4, "end": 26, "label": "ANATOMY"},
+            {"start": 30, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The skin is closed with fine, absorbable sutures.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 12, "end": 18, "label": "ACTION"},
+            {"start": 25, "end": 48, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a cleft palate repair.",
+        "labels": [
+            {"start": 28, "end": 46, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The palate has a wide defect.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 19, "end": 30, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon mobilizes flaps of tissue to close the gap.",
+        "labels": [
+            {"start": 13, "end": 22, "label": "ACTION"},
+            {"start": 23, "end": 28, "label": "INSTRUMENT"},
+            {"start": 32, "end": 38, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The muscles of the soft palate are repositioned.",
+        "labels": [
+            {"start": 4, "end": 26, "label": "ANATOMY"},
+            {"start": 31, "end": 43, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The repair should improve speech and feeding.",
+        "labels": []
+    },
+    {
+        "text": "The surgeon is performing a rhinoplasty.",
+        "labels": [
+            {"start": 28, "end": 40, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient has a dorsal hump and a deviated tip.",
+        "labels": [
+            {"start": 22, "end": 34, "label": "OBSERVATION"},
+            {"start": 43, "end": 56, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The nasal bones are fractured with an osteotome.",
+        "labels": [
+            {"start": 4, "end": 16, "label": "ANATOMY"},
+            {"start": 21, "end": 30, "label": "ACTION"},
+            {"start": 37, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The cartilage is reshaped with sutures and grafts.",
+        "labels": [
+            {"start": 4, "end": 13, "label": "ANATOMY"},
+            {"start": 17, "end": 25, "label": "ACTION"},
+            {"start": 32, "end": 39, "label": "INSTRUMENT"},
+            {"start": 44, "end": 50, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "A nasal splint is applied at the end.",
+        "labels": [
+            {"start": 2, "end": 14, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a blepharoplasty.",
+        "labels": [
+            {"start": 28, "end": 42, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient has excess skin on the upper eyelids.",
+        "labels": [
+            {"start": 16, "end": 27, "label": "OBSERVATION"},
+            {"start": 35, "end": 50, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "An incision is made in the eyelid crease.",
+        "labels": [
+            {"start": 2, "end": 10, "label": "ACTION"},
+            {"start": 26, "end": 39, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Excess skin and fat are removed.",
+        "labels": [
+            {"start": 7, "end": 11, "label": "ANATOMY"},
+            {"start": 16, "end": 19, "label": "ANATOMY"},
+            {"start": 24, "end": 31, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The incision is closed with fine sutures.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ACTION"},
+            {"start": 29, "end": 36, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a facelift.",
+        "labels": [
+            {"start": 28, "end": 37, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Incisions are made along the hairline and around the ear.",
+        "labels": [
+            {"start": 0, "end": 9, "label": "ACTION"},
+            {"start": 28, "end": 36, "label": "ANATOMY"},
+            {"start": 49, "end": 52, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The skin is elevated and the underlying SMAS layer is tightened.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 12, "end": 20, "label": "ACTION"},
+            {"start": 40, "end": 50, "label": "ANATOMY"},
+            {"start": 54, "end": 64, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Excess skin is excised and the incisions are closed.",
+        "labels": [
+            {"start": 7, "end": 11, "label": "ANATOMY"},
+            {"start": 15, "end": 22, "label": "ACTION"},
+            {"start": 31, "end": 40, "label": "ACTION"},
+            {"start": 44, "end": 50, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient will have a more youthful appearance.",
+        "labels": [
+            {"start": 26, "end": 46, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a liposuction.",
+        "labels": [
+            {"start": 28, "end": 40, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "A cannula is inserted through a small incision.",
+        "labels": [
+            {"start": 2, "end": 9, "label": "INSTRUMENT"},
+            {"start": 13, "end": 21, "label": "ACTION"},
+            {"start": 35, "end": 43, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Tumescent fluid is injected to numb the area and reduce bleeding.",
+        "labels": [
+            {"start": 0, "end": 16, "label": "INSTRUMENT"},
+            {"start": 20, "end": 28, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The fat is suctioned out with a vacuum.",
+        "labels": [
+            {"start": 4, "end": 7, "label": "ANATOMY"},
+            {"start": 11, "end": 20, "label": "ACTION"},
+            {"start": 31, "end": 37, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The patient will wear a compression garment after surgery.",
+        "labels": [
+            {"start": 26, "end": 46, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing an abdominoplasty.",
+        "labels": [
+            {"start": 28, "end": 42, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "An incision is made from hip to hip.",
+        "labels": [
+            {"start": 2, "end": 10, "label": "ACTION"},
+            {"start": 26, "end": 29, "label": "ANATOMY"},
+            {"start": 33, "end": 36, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The skin and fat are lifted off the abdominal muscles.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 13, "end": 16, "label": "ANATOMY"},
+            {"start": 21, "end": 27, "label": "ACTION"},
+            {"start": 35, "end": 53, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The abdominal muscles are tightened with sutures.",
+        "labels": [
+            {"start": 4, "end": 22, "label": "ANATOMY"},
+            {"start": 27, "end": 37, "label": "ACTION"},
+            {"start": 44, "end": 51, "label": "INSTRUMENT"}
+        ]
+    },
+    {
+        "text": "Excess skin is removed and the belly button is repositioned.",
+        "labels": [
+            {"start": 7, "end": 11, "label": "ANATOMY"},
+            {"start": 15, "end": 22, "label": "ACTION"},
+            {"start": 31, "end": 43, "label": "ANATOMY"},
+            {"start": 47, "end": 60, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient will have a flatter abdomen.",
+        "labels": [
+            {"start": 26, "end": 42, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a breast augmentation.",
+        "labels": [
+            {"start": 28, "end": 48, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "An incision is made in the inframammary fold.",
+        "labels": [
+            {"start": 2, "end": 10, "label": "ACTION"},
+            {"start": 26, "end": 45, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A pocket is created under the pectoral muscle.",
+        "labels": [
+            {"start": 2, "end": 8, "label": "OBSERVATION"},
+            {"start": 31, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "A saline or silicone implant is placed in the pocket.",
+        "labels": [
+            {"start": 11, "end": 27, "label": "INSTRUMENT"},
+            {"start": 31, "end": 37, "label": "ACTION"},
+            {"start": 45, "end": 51, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The incision is closed.",
+        "labels": [
+            {"start": 4, "end": 12, "label": "ACTION"},
+            {"start": 16, "end": 22, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a breast lift.",
+        "labels": [
+            {"start": 28, "end": 40, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The nipple and areola are repositioned higher on the breast.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 15, "end": 21, "label": "ANATOMY"},
+            {"start": 26, "end": 39, "label": "ACTION"},
+            {"start": 50, "end": 56, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Excess skin is removed from the lower part of the breast.",
+        "labels": [
+            {"start": 7, "end": 11, "label": "ANATOMY"},
+            {"start": 15, "end": 22, "label": "ACTION"},
+            {"start": 32, "end": 54, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The breast is reshaped to be more youthful.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 14, "end": 22, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a breast reduction.",
+        "labels": [
+            {"start": 28, "end": 45, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "Excess breast tissue, fat, and skin are removed.",
+        "labels": [
+            {"start": 7, "end": 21, "label": "ANATOMY"},
+            {"start": 23, "end": 26, "label": "ANATOMY"},
+            {"start": 32, "end": 36, "label": "ANATOMY"},
+            {"start": 41, "end": 48, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The nipple and areola are moved to a higher position.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 15, "end": 21, "label": "ANATOMY"},
+            {"start": 26, "end": 31, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The breast is reshaped and reduced in size.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 14, "end": 22, "label": "ACTION"},
+            {"start": 27, "end": 34, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient will have relief from back and neck pain.",
+        "labels": [
+            {"start": 32, "end": 36, "label": "ANATOMY"},
+            {"start": 41, "end": 50, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a gynecomastia surgery.",
+        "labels": [
+            {"start": 28, "end": 50, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient is a male with excess breast tissue.",
+        "labels": [
+            {"start": 33, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Liposuction and excision are used to remove the tissue.",
+        "labels": [
+            {"start": 0, "end": 11, "label": "ACTION"},
+            {"start": 16, "end": 24, "label": "ACTION"},
+            {"start": 45, "end": 51, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The chest will have a more masculine contour.",
+        "labels": [
+            {"start": 4, "end": 9, "label": "ANATOMY"},
+            {"start": 26, "end": 47, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a brachioplasty.",
+        "labels": [
+            {"start": 28, "end": 42, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient has excess skin on the upper arms.",
+        "labels": [
+            {"start": 16, "end": 27, "label": "OBSERVATION"},
+            {"start": 35, "end": 46, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "An incision is made on the inner aspect of the arm.",
+        "labels": [
+            {"start": 2, "end": 10, "label": "ACTION"},
+            {"start": 44, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "Excess skin and fat are removed.",
+        "labels": [
+            {"start": 7, "end": 11, "label": "ANATOMY"},
+            {"start": 16, "end": 19, "label": "ANATOMY"},
+            {"start": 24, "end": 31, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The arms will have a more toned appearance.",
+        "labels": [
+            {"start": 4, "end": 8, "label": "ANATOMY"},
+            {"start": 25, "end": 45, "label": "OBSERVATION"}
+        ]
+    },
+    {
+        "text": "The surgeon is performing a thigh lift.",
+        "labels": [
+            {"start": 28, "end": 38, "label": "ACTION"}
+        ]
+    },
+    {
+        "text": "The patient has excess skin on the inner thighs.",
+        "labels": [
+            {"start": 16, "end": 27, "label": "OBSERVATION"},
+            {"start": 35, "end": 47, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "An incision is made in the groin crease.",
+        "labels": [
+            {"start": 2, "end": 10, "label": "ACTION"},
+            {"start": 26, "end": 38, "label": "ANATOMY"}
+        ]
+    },
+    {
+        "text": "The thighs will have a firmer contour.",
+        "labels": [
+            {"start": 4, "end": 10, "label": "ANATOMY"},
+            {"start": 26, "end": 42, "label": "OBSERVATION"}
+        ]
+    }
+]
