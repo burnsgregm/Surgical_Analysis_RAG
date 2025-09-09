@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architecture title="Surgical Analysis AI – High-Level Workflow" version="1.0" date="2025-09-09">
+  <!--
+    Simple XML schema:
+      - <group>: logical swimlane/phase
+      - <node>: a component, model, service, or datastore
+      - <edge>: a directed connection between nodes (data or control flow)
+      - Common node attributes:
+          id, type = {client, service, job, model, tool, datastore, storage, queue, optional}
+          tech: primary tech or library
+          file: source file (when applicable)
+          notes: short description
+  -->
+
+  <group id="phase_ingest" label="Phase 1: Build the Brain (Offline Knowledge Ingestion)">
+    <node id="pdf_corpus" type="storage" name="Textbook PDFs" path="./textbooks" notes="10 surgical textbooks"/>
+    <node id="pdf_loader" type="tool" name="PyMuPDF Loader" tech="PyMuPDF" file="1_ingest_knowledge_base.py" notes="Parse & chunk (size?1000, overlap?150)"/>
+    <node id="ner_train_job" type="job" name="NER Training" tech="Transformers" file="3_train_ner_model.py" notes="Fine-tune DistilBERT for INSTRUMENT/ANATOMY/ACTION/OBSERVATION"/>
+    <node id="ner_model" type="model" name="Custom NER Model" tech="DistilBERT" path="./surgical_ner_model" notes="Token classification (IOB2)"/>
+    <node id="embedder" type="model" name="Text Embedder" tech="sentence-transformers: all-MiniLM-L6-v2" notes="GPU-enabled embeddings"/>
+    <node id="vector_db" type="datastore" name="Chroma Vector DB (Enriched)" path="./vector_db_enriched" notes="Persistent store with entity metadata"/>
+    <node id="ingest_logs" type="datastore" name="Ingestion Logs" path="./logs/ingest" notes="Console/file logs"/>
+
+    <edge from="pdf_corpus" to="pdf_loader" label="read PDFs"/>
+    <edge from="pdf_loader" to="ner_model" label="entity tags via inference (optional during ingest)"/>
+    <edge from="ner_train_job" to="ner_model" label="produces model"/>
+    <edge from="pdf_loader" to="embedder" label="chunked text"/>
+    <edge from="embedder" to="vector_db" label="store embeddings + metadata"/>
+    <edge from="pdf_loader" to="ingest_logs" label="status/metrics"/>
+    <edge from="embedder" to="ingest_logs" label="status/metrics"/>
+    <edge from="ner_train_job" to="ingest_logs" label="training logs & metrics"/>
+  </group>
+
+  <group id="phase_online" label="Phase 2: Live Analysis Pipeline (Online Application)">
+    <node id="web_client" type="client" name="Web Client (index.html)" notes="User selects video and submits"/>
+    <node id="api_app" type="service" name="FastAPI App" tech="Uvicorn/FastAPI" file="main_app.py" notes="POST /analyze_video; serves static UI"/>
+    <node id="uploads" type="storage" name="Uploads" path="./uploads" notes="Raw user videos"/>
+    <node id="ffmpeg" type="tool" name="ffmpeg" notes="Extract audio & sample frames (~5s)"/>
+    <node id="stt" type="model" name="Transcription (Gemini 1.5 Flash)" tech="Google Generative AI" notes="Speech-to-text transcript"/>
+    <node id="frame_captioner" type="model" name="Frame Captioner (LLaVA-1.5-7B Q4)" tech="local GPU" notes="Keyframe descriptions"/>
+    <node id="entity_extractor" type="model" name="Entity Extractor" tech="Custom NER (DistilBERT)" notes="INSTRUMENT/ANATOMY/ACTION/OBSERVATION from transcript & captions"/>
+    <node id="retriever" type="service" name="Retriever" tech="Chroma" notes="Top-k semantic search with entity filters"/>
+    <node id="rag_llm" type="model" name="RAG LLM" tech="Gemini 1.5 (Pro/Flash)" notes="Composes final analysis using system prompt + retrieved context"/>
+    <node id="results" type="storage" name="Results JSON" path="./results" notes="Transcript, timeline, citations, analysis"/>
+    <node id="obs_logs" type="datastore" name="App Logs" path="./logs/app" notes="Observability: request, error, timing"/>
+    <node id="gpu_node" type="service" name="GPU VM" notes="e.g., RTX A5000; hosts captioner & embeddings"/>
+    <node id="kb_vectors" type="datastore" name="Vector DB (Enriched)" path="./vector_db_enriched" notes="Shared with Phase 1"/>
+
+    <edge from="web_client" to="api_app" label="POST /analyze_video (video file)"/>
+    <edge from="api_app" to="uploads" label="persist video"/>
+    <edge from="api_app" to="ffmpeg" label="invoke processing"/>
+    <edge from="ffmpeg" to="stt" label="audio ? transcript"/>
+    <edge from="ffmpeg" to="frame_captioner" label="sampled frames ? captions"/>
+    <edge from="stt" to="entity_extractor" label="transcript text"/>
+    <edge from="frame_captioner" to="entity_extractor" label="visual captions"/>
+    <edge from="entity_extractor" to="retriever" label="entity filters + query"/>
+    <edge from="retriever" to="kb_vectors" label="semantic search"/>
+    <edge from="kb_vectors" to="retriever" label="top-k chunks + metadata"/>
+    <edge from="retriever" to="rag_llm" label="retrieved context"/>
+    <edge from="stt" to="rag_llm" label="user transcript (question/context)"/>
+    <edge from="rag_llm" to="results" label="final analysis JSON"/>
+    <edge from="results" to="web_client" label="response payload (analysis, citations, timeline)"/>
+    <edge from="api_app" to="obs_logs" label="request + error logs"/>
+    <edge from="rag_llm" to="obs_logs" label="generation metrics"/>
+    <edge from="frame_captioner" to="gpu_node" label="GPU execution" direction="requires"/>
+  </group>
+
+  <group id="phase_alt" label="Optional / Prototype Microservice">
+    <node id="rag_api" type="service" name="Lightweight RAG API" file="2_rag_api_server.py" notes="POST /analyze (transcript + visual events)"/>
+    <edge from="web_client" to="rag_api" label="alt request (JSON only)"/>
+    <edge from="rag_api" to="kb_vectors" label="retrieve top-k"/>
+    <edge from="rag_api" to="results" label="concise check output"/>
+  </group>
+
+  <legend>
+    <type name="client" color="#ffd166"/>
+    <type name="service" color="#118ab2"/>
+    <type name="job" color="#ef476f"/>
+    <type name="model" color="#06d6a0"/>
+    <type name="tool" color="#8338ec"/>
+    <type name="datastore" color="#8ecae6"/>
+    <type name="storage" color="#adb5bd"/>
+  </legend>
+</architecture>

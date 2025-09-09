@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+  id="Defs_SurgicalAnalysisAI"
+  targetNamespace="http://example.com/bpmn/surgical-analysis-ai">
+
+  <!-- Data Stores (for labeling only; no data associations) -->
+  <bpmn:dataStore id="DS_Textbooks" name="Textbook PDFs (./textbooks)"/>
+  <bpmn:dataStore id="DS_VectorDB" name="Chroma Vector DB (Enriched, ./vector_db_enriched)"/>
+  <bpmn:dataStore id="DS_Uploads"  name="Uploads Folder (./uploads)"/>
+  <bpmn:dataStore id="DS_Results"  name="Results JSON (./results)"/>
+  <bpmn:dataStore id="DS_AppLogs"  name="Observability &amp; Errors (./logs/app)"/>
+  <bpmn:dataStore id="DS_IngestLogs" name="Ingestion Logs (./logs/ingest)"/>
+
+  <!-- Collaboration (three pools) -->
+  <bpmn:collaboration id="Collab_SurgicalAnalysisAI" name="Surgical Analysis AI — High-Level Architecture">
+    <bpmn:participant id="Pool_Client" processRef="Process_Client" name="Web Client UI (index.html)"/>
+    <bpmn:participant id="Pool_Analysis" processRef="Process_Analysis" name="Live Analysis Pipeline (FastAPI/Uvicorn)"/>
+    <bpmn:participant id="Pool_Ingest" processRef="Process_Ingest" name="Build the Brain (Offline Knowledge Ingestion)"/>
+
+    <!-- Message Flows (between valid interaction nodes) -->
+    <bpmn:messageFlow id="MF_VideoToAPI" name="POST /analyze_video (video file)" sourceRef="Task_SubmitVideo" targetRef="Task_PersistVideo"/>
+    <bpmn:messageFlow id="MF_ResultsToClient" name="Response payload (analysis, citations, timeline)" sourceRef="Task_AssembleResults" targetRef="Task_ReceiveResults"/>
+  </bpmn:collaboration>
+
+  <!-- ===================== -->
+  <!-- P1: Offline Ingestion -->
+  <!-- ===================== -->
+  <bpmn:process id="Process_Ingest" name="Phase 1 — Build the Brain" isExecutable="false">
+    <!-- (Optional) data store references for visual context -->
+    <bpmn:dataStoreReference id="DSR_Textbooks" dataStoreRef="DS_Textbooks"/>
+    <bpmn:dataStoreReference id="DSR_VectorDB" dataStoreRef="DS_VectorDB"/>
+    <bpmn:dataStoreReference id="DSR_IngestLogs" dataStoreRef="DS_IngestLogs"/>
+
+    <bpmn:startEvent id="Start_Ingest" name="Start (ingestion run)"/>
+    <bpmn:task id="Task_ReadPDFs" name="Read PDFs"/>
+    <bpmn:task id="Task_ChunkPDFs" name="Chunk (PyMuPDF)&#10;size≈1000, overlap 150"/>
+    <bpmn:task id="Task_TrainNER" name="Train NER (DistilBERT)&#10;labels: INSTRUMENT/ANATOMY/ACTION/OBSERVATION&#10;(3_train_ner_model.py)"/>
+    <bpmn:task id="Task_EmbedText" name="Embed Text (all-MiniLM-L6-v2, GPU)"/>
+    <bpmn:endEvent id="End_Ingest" name="Vector DB ready"/>
+
+    <!-- Sequence Flow -->
+    <bpmn:sequenceFlow id="F_I1" sourceRef="Start_Ingest" targetRef="Task_ReadPDFs"/>
+    <bpmn:sequenceFlow id="F_I2" sourceRef="Task_ReadPDFs" targetRef="Task_ChunkPDFs"/>
+    <bpmn:sequenceFlow id="F_I3" sourceRef="Task_ChunkPDFs" targetRef="Task_TrainNER"/>
+    <bpmn:sequenceFlow id="F_I4" sourceRef="Task_TrainNER" targetRef="Task_EmbedText"/>
+    <bpmn:sequenceFlow id="F_I5" sourceRef="Task_EmbedText" targetRef="End_Ingest"/>
+  </bpmn:process>
+
+  <!-- ======================= -->
+  <!-- P2: Online (FastAPI)    -->
+  <!-- ======================= -->
+  <bpmn:process id="Process_Analysis" name="Phase 2 — Live Analysis Pipeline" isExecutable="true">
+    <!-- (Optional) data store references for visual context -->
+    <bpmn:dataStoreReference id="DSR_VectorDB_A" dataStoreRef="DS_VectorDB"/>
+    <bpmn:dataStoreReference id="DSR_Uploads_A"  dataStoreRef="DS_Uploads"/>
+    <bpmn:dataStoreReference id="DSR_Results_A"  dataStoreRef="DS_Results"/>
+    <bpmn:dataStoreReference id="DSR_AppLogs_A"  dataStoreRef="DS_AppLogs"/>
+
+    <bpmn:startEvent id="Start_Analysis" name="Start (request received)"/>
+    <bpmn:task id="Task_PersistVideo" name="Persist Video to Uploads (FastAPI)"/>
+    <bpmn:task id="Task_FFmpeg" name="Extract Audio &amp; Sample Frames (ffmpeg)"/>
+
+    <bpmn:parallelGateway id="GW_FanOut" name="Fan-out"/>
+    <bpmn:task id="Task_STT" name="Transcribe Audio (Gemini 1.5 Flash)"/>
+    <bpmn:task id="Task_Captioner" name="Caption Frames (LLaVA-1.5-7B Q4, local GPU)"/>
+    <bpmn:parallelGateway id="GW_FanIn" name="Join"/>
+
+    <bpmn:task id="Task_Entities" name="Extract Entities (Custom NER)"/>
+    <bpmn:task id="Task_Retrieve" name="Retrieve Context (Chroma, top-k w/ entity filters)"/>
+    <bpmn:task id="Task_RAGLLM" name="Compose Analysis (Gemini 1.5 Pro/Flash)"/>
+    <bpmn:task id="Task_AssembleResults" name="Assemble Results JSON (transcript, timeline, retrieved, citations)"/>
+    <bpmn:endEvent id="End_Analysis" name="Done"/>
+
+    <!-- Sequence Flow -->
+    <bpmn:sequenceFlow id="F_A0" sourceRef="Start_Analysis" targetRef="Task_PersistVideo"/>
+    <bpmn:sequenceFlow id="F_A2" sourceRef="Task_PersistVideo" targetRef="Task_FFmpeg"/>
+    <bpmn:sequenceFlow id="F_A3" sourceRef="Task_FFmpeg" targetRef="GW_FanOut"/>
+    <bpmn:sequenceFlow id="F_A4" sourceRef="GW_FanOut" targetRef="Task_STT"/>
+    <bpmn:sequenceFlow id="F_A5" sourceRef="GW_FanOut" targetRef="Task_Captioner"/>
+    <bpmn:sequenceFlow id="F_A6" sourceRef="Task_STT" targetRef="GW_FanIn"/>
+    <bpmn:sequenceFlow id="F_A7" sourceRef="Task_Captioner" targetRef="GW_FanIn"/>
+    <bpmn:sequenceFlow id="F_A8" sourceRef="GW_FanIn" targetRef="Task_Entities"/>
+    <bpmn:sequenceFlow id="F_A9" sourceRef="Task_Entities" targetRef="Task_Retrieve"/>
+    <bpmn:sequenceFlow id="F_A10" sourceRef="Task_Retrieve" targetRef="Task_RAGLLM"/>
+    <bpmn:sequenceFlow id="F_A11" sourceRef="Task_RAGLLM" targetRef="Task_AssembleResults"/>
+    <bpmn:sequenceFlow id="F_A12" sourceRef="Task_AssembleResults" targetRef="End_Analysis"/>
+  </bpmn:process>
+
+  <!-- ======================= -->
+  <!-- P3: Web Client (UI)     -->
+  <!-- ======================= -->
+  <bpmn:process id="Process_Client" name="Web Client UI (index.html)" isExecutable="false">
+    <bpmn:startEvent id="Start_Client" name="Open UI"/>
+    <bpmn:task id="Task_SelectVideo" name="Select Video"/>
+    <bpmn:sendTask id="Task_SubmitVideo" name="Submit Video (POST /analyze_video)"/>
+    <bpmn:receiveTask id="Task_ReceiveResults" name="Receive Results"/>
+    <bpmn:task id="Task_RenderResults" name="Render Analysis (transcript, timeline, citations)"/>
+    <bpmn:endEvent id="End_Client" name="Done"/>
+
+    <bpmn:sequenceFlow id="F_C1" sourceRef="Start_Client" targetRef="Task_SelectVideo"/>
+    <bpmn:sequenceFlow id="F_C2" sourceRef="Task_SelectVideo" targetRef="Task_SubmitVideo"/>
+    <bpmn:sequenceFlow id="F_C3" sourceRef="Task_ReceiveResults" targetRef="Task_RenderResults"/>
+    <bpmn:sequenceFlow id="F_C4" sourceRef="Task_RenderResults" targetRef="End_Client"/>
+  </bpmn:process>
+
+  <!-- ======================= -->
+  <!-- BPMN-DI (rough layout)  -->
+  <!-- ======================= -->
+  <bpmndi:BPMNDiagram id="Diagram_SurgicalAnalysisAI">
+    <bpmndi:BPMNPlane id="Plane_Collab" bpmnElement="Collab_SurgicalAnalysisAI">
+
+      <!-- Pools -->
+      <bpmndi:BPMNShape id="Shape_Pool_Ingest" bpmnElement="Pool_Ingest" isHorizontal="true">
+        <dc:Bounds x="30" y="40" width="1500" height="230"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Pool_Analysis" bpmnElement="Pool_Analysis" isHorizontal="true">
+        <dc:Bounds x="30" y="290" width="1500" height="330"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Pool_Client" bpmnElement="Pool_Client" isHorizontal="true">
+        <dc:Bounds x="30" y="640" width="1500" height="200"/>
+      </bpmndi:BPMNShape>
+
+      <!-- Ingestion nodes -->
+      <bpmndi:BPMNShape id="Shape_Start_Ingest" bpmnElement="Start_Ingest">
+        <dc:Bounds x="70" y="130" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_ReadPDFs" bpmnElement="Task_ReadPDFs">
+        <dc:Bounds x="130" y="120" width="170" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_ChunkPDFs" bpmnElement="Task_ChunkPDFs">
+        <dc:Bounds x="330" y="120" width="200" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_TrainNER" bpmnElement="Task_TrainNER">
+        <dc:Bounds x="560" y="120" width="270" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_EmbedText" bpmnElement="Task_EmbedText">
+        <dc:Bounds x="860" y="120" width="230" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_End_Ingest" bpmnElement="End_Ingest">
+        <dc:Bounds x="1120" y="130" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+
+      <!-- Ingestion flows -->
+      <bpmndi:BPMNEdge id="Edge_F_I1" bpmnElement="F_I1">
+        <di:waypoint x="106" y="148"/><di:waypoint x="130" y="148"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_I2" bpmnElement="F_I2">
+        <di:waypoint x="300" y="148"/><di:waypoint x="330" y="148"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_I3" bpmnElement="F_I3">
+        <di:waypoint x="530" y="148"/><di:waypoint x="560" y="148"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_I4" bpmnElement="F_I4">
+        <di:waypoint x="830" y="148"/><di:waypoint x="860" y="148"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_I5" bpmnElement="F_I5">
+        <di:waypoint x="1090" y="148"/><di:waypoint x="1120" y="148"/>
+      </bpmndi:BPMNEdge>
+
+      <!-- Analysis nodes -->
+      <bpmndi:BPMNShape id="Shape_Start_Analysis" bpmnElement="Start_Analysis">
+        <dc:Bounds x="120" y="400" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_PersistVideo" bpmnElement="Task_PersistVideo">
+        <dc:Bounds x="180" y="390" width="230" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_FFmpeg" bpmnElement="Task_FFmpeg">
+        <dc:Bounds x="440" y="390" width="230" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_GW_FanOut" bpmnElement="GW_FanOut">
+        <dc:Bounds x="700" y="405" width="40" height="40"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_STT" bpmnElement="Task_STT">
+        <dc:Bounds x="780" y="350" width="260" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Captioner" bpmnElement="Task_Captioner">
+        <dc:Bounds x="780" y="450" width="260" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_GW_FanIn" bpmnElement="GW_FanIn">
+        <dc:Bounds x="1070" y="405" width="40" height="40"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Entities" bpmnElement="Task_Entities">
+        <dc:Bounds x="1140" y="390" width="240" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_Retrieve" bpmnElement="Task_Retrieve">
+        <dc:Bounds x="1400" y="390" width="260" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_RAGLLM" bpmnElement="Task_RAGLLM">
+        <dc:Bounds x="1680" y="390" width="260" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_AssembleResults" bpmnElement="Task_AssembleResults">
+        <dc:Bounds x="1960" y="390" width="300" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_End_Analysis" bpmnElement="End_Analysis">
+        <dc:Bounds x="2280" y="400" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+
+      <!-- Analysis flows -->
+      <bpmndi:BPMNEdge id="Edge_F_A0" bpmnElement="F_A0">
+        <di:waypoint x="156" y="418"/><di:waypoint x="180" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A2" bpmnElement="F_A2">
+        <di:waypoint x="410" y="418"/><di:waypoint x="440" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A3" bpmnElement="F_A3">
+        <di:waypoint x="670" y="418"/><di:waypoint x="700" y="425"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A4" bpmnElement="F_A4">
+        <di:waypoint x="740" y="425"/><di:waypoint x="780" y="378"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A5" bpmnElement="F_A5">
+        <di:waypoint x="740" y="425"/><di:waypoint x="780" y="478"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A6" bpmnElement="F_A6">
+        <di:waypoint x="1040" y="378"/><di:waypoint x="1070" y="425"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A7" bpmnElement="F_A7">
+        <di:waypoint x="1040" y="478"/><di:waypoint x="1070" y="425"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A8" bpmnElement="F_A8">
+        <di:waypoint x="1110" y="425"/><di:waypoint x="1140" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A9" bpmnElement="F_A9">
+        <di:waypoint x="1380" y="418"/><di:waypoint x="1400" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A10" bpmnElement="F_A10">
+        <di:waypoint x="1660" y="418"/><di:waypoint x="1680" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A11" bpmnElement="F_A11">
+        <di:waypoint x="1940" y="418"/><di:waypoint x="1960" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_A12" bpmnElement="F_A12">
+        <di:waypoint x="2260" y="418"/><di:waypoint x="2280" y="418"/>
+      </bpmndi:BPMNEdge>
+
+      <!-- Client nodes -->
+      <bpmndi:BPMNShape id="Shape_Start_Client" bpmnElement="Start_Client">
+        <dc:Bounds x="120" y="715" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_SelectVideo" bpmnElement="Task_SelectVideo">
+        <dc:Bounds x="180" y="705" width="170" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_SubmitVideo" bpmnElement="Task_SubmitVideo">
+        <dc:Bounds x="370" y="705" width="260" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_ReceiveResults" bpmnElement="Task_ReceiveResults">
+        <dc:Bounds x="660" y="705" width="220" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_RenderResults" bpmnElement="Task_RenderResults">
+        <dc:Bounds x="900" y="705" width="260" height="56"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_End_Client" bpmnElement="End_Client">
+        <dc:Bounds x="1180" y="715" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+
+      <!-- Client flows -->
+      <bpmndi:BPMNEdge id="Edge_F_C1" bpmnElement="F_C1">
+        <di:waypoint x="156" y="733"/><di:waypoint x="180" y="733"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_C2" bpmnElement="F_C2">
+        <di:waypoint x="350" y="733"/><di:waypoint x="370" y="733"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_C3" bpmnElement="F_C3">
+        <di:waypoint x="880" y="733"/><di:waypoint x="900" y="733"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_F_C4" bpmnElement="F_C4">
+        <di:waypoint x="1160" y="733"/><di:waypoint x="1180" y="733"/>
+      </bpmndi:BPMNEdge>
+
+      <!-- Message flow edges -->
+      <bpmndi:BPMNEdge id="Edge_MF_VideoToAPI" bpmnElement="MF_VideoToAPI">
+        <di:waypoint x="630" y="705"/><di:waypoint x="295" y="418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_MF_ResultsToClient" bpmnElement="MF_ResultsToClient">
+        <di:waypoint x="2110" y="418"/><di:waypoint x="770" y="705"/>
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
