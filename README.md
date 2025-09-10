@@ -22,14 +22,7 @@
 ├─ main_app.py                 # FastAPI app serving the web UI and /analyze_video
 ├─ index.html                  # Web UI (place under ./static/ for V2 runtime)
 ├─ 1_ingest_knowledge_base.py  # Build enriched Chroma DB from PDF textbooks
-├─ 2_rag_api_server.py         # Lightweight RAG microservice (JSON in/out; optional)
 ├─ 3_train_ner_model.py        # Fine-tune DistilBERT NER (INSTRUMENT/ANATOMY/ACTION/OBSERVATION)
-├─ FreeFuse Surgical Analysis POC P2 System Design Doc.pdf
-├─ static/                     # Created at runtime; mount point for UI
-├─ uploads/                    # Created at runtime; temporary video/audio files
-├─ textbooks/                  # Put your PDF textbooks here (input to ingestion)
-├─ vector_db_enriched/         # Created by ingestion; persistent Chroma DB
-└─ surgical_ner_model/         # Created by NER training; HF token-classification model
 ```
 
 > **Note:** `main_app.py` serves `./static/index.html`. If your `index.html` is in repo root, move it to `./static/index.html`.
